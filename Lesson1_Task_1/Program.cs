@@ -16,9 +16,12 @@ int value2 = Prompt("Введите второе число: ");
 if (value1 > value2)
 {
     System.Console.WriteLine($"Max = {value1}");
+    System.Console.WriteLine($"Min = {value2}");
+
 }
 else
 {
     System.Console.WriteLine($"Max = {value2}");
+    System.Console.WriteLine($"Max = {value1}");
 }
 
