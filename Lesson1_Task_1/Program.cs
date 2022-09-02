@@ -22,6 +22,6 @@ if (value1 > value2)
 else
 {
     System.Console.WriteLine($"Max = {value2}");
-    System.Console.WriteLine($"Max = {value1}");
+    System.Console.WriteLine($"Min = {value1}");
 }
 
