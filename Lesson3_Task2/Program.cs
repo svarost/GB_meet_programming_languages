@@ -9,7 +9,6 @@ int[] bPoint = InsetrtCoords("B");
 System.Console.WriteLine($"Расстояние между точками = {Length(aPoint, bPoint):f2}");
 
 
-
 int Promt(string message)
 {
     System.Console.Write(message);
