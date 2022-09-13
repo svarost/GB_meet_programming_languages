@@ -10,7 +10,7 @@ int [] Prompt(string message)
     
     System.Console.Write(message); // Вывод приглашения
     string? value = Console.ReadLine();
-    if (value != null)
+    if (!String.IsNullOrEmpty(value))
     {
         string [] stringArray = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
         int [] intArray = new int [stringArray.Length];
