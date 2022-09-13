@@ -1,26 +1,39 @@
 ﻿// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-System.Console.WriteLine(SumDigitsOfNumber(Prompt("Введите массив из 8 элементов: ")));
+PrintArray(Prompt("Введите массив из 8 элементов: "));
 
-
-// Создание массива
-int[] CreatArray(string String)
-{   
-    пше
-
-
-    return array;
-}
 
 // Ввод числа из консоли по приглашению
-int Prompt(string message)
+int [] Prompt(string message)
 {
+    char [] separators = new char [] {',', ' '};
+    
     System.Console.Write(message); // Вывод приглашения
-    // string strValue; // Объявление переменной для ввода строки
-    // strValue = Console.ReadLine(); // Вводим строку с консоли (с консоли можно ввести только строку)
-    if (int.TryParse(Console.ReadLine(), out int value))
+    string? value = Console.ReadLine();
+    if (value != null)
     {
-        return value;
+        string [] stringArray = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+        int [] intArray = new int [stringArray.Length];
+        for (int i = 0; i < stringArray.Length; i++)
+        {
+            if (int.TryParse(stringArray[i], out int num))
+            {
+                intArray[i] = num;
+            }
+            else throw new Exception("Введенные значения невозможно преобразовать в числовой массив.");
+        }
+        return intArray;
     }
-    throw new Exception("Данное значение невозможно преобразовать в число");
+    throw new Exception("Введен пустой массив.");
+}
+
+void PrintArray(int [] array)
+{
+    System.Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write(array[i]);
+        if (i < array.Length - 1) System.Console.Write(", ");
+    }
+    System.Console.Write("]");
 }
