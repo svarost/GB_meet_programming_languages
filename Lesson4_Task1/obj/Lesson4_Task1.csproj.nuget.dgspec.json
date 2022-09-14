@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Обучение\\GeekBrains\\Разработчик\\Знакомство с языками программирования\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj": {}
+    "D:\\Geekbrains\\Разработчик\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj": {}
   },
   "projects": {
-    "D:\\Обучение\\GeekBrains\\Разработчик\\Знакомство с языками программирования\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj": {
+    "D:\\Geekbrains\\Разработчик\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Обучение\\GeekBrains\\Разработчик\\Знакомство с языками программирования\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj",
+        "projectUniqueName": "D:\\Geekbrains\\Разработчик\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj",
         "projectName": "Lesson4_Task1",
-        "projectPath": "D:\\Обучение\\GeekBrains\\Разработчик\\Знакомство с языками программирования\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj",
-        "packagesPath": "C:\\Users\\mrsam\\.nuget\\packages\\",
-        "outputPath": "D:\\Обучение\\GeekBrains\\Разработчик\\Знакомство с языками программирования\\GB_meet_programming_languages\\Lesson4_Task1\\obj\\",
+        "projectPath": "D:\\Geekbrains\\Разработчик\\GB_meet_programming_languages\\Lesson4_Task1\\Lesson4_Task1.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Geekbrains\\Разработчик\\GB_meet_programming_languages\\Lesson4_Task1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mrsam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

@@ -6,6 +6,10 @@ System.Console.WriteLine(Exponentiation(Prompt("Введите число: "), P
 // Возведение в степень
 int Exponentiation(int num, int degree)
 {   
+    if (degree < 1)
+    {
+        throw new Exception("Введено значение степени в ненатуральном виде.");
+    }
     int pow = num;
     for(int i = 1; i < degree; i++)
     {
