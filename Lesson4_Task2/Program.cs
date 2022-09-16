@@ -6,22 +6,21 @@ System.Console.WriteLine(SumDigitsOfNumber(Prompt("Введите число: ")
 // Возведение в степень
 int SumDigitsOfNumber(int number)
 {   
-    int count = Math.Abs(number).ToString().Length;
+    int numAbs = Math.Abs(number);
     int sum = 0;
-    for(int i = 0; i < count; i++)
+    while (numAbs > 10)
     {
-        sum += Math.Abs(number) % 10;
-        number /= 10;
+        sum += numAbs % 10;
+        numAbs /= 10;
     }
+    sum += numAbs;
     return sum;
 }
 
 // Ввод числа из консоли по приглашению
 int Prompt(string message)
 {
-    System.Console.Write(message); // Вывод приглашения
-    // string strValue; // Объявление переменной для ввода строки
-    // strValue = Console.ReadLine(); // Вводим строку с консоли (с консоли можно ввести только строку)
+    System.Console.Write(message);
     if (int.TryParse(Console.ReadLine(), out int value))
     {
         return value;

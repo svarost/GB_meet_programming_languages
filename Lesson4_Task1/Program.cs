@@ -6,10 +6,11 @@ System.Console.WriteLine(Exponentiation(Prompt("Введите число: "), P
 // Возведение в степень
 int Exponentiation(int num, int degree)
 {   
-    if (degree < 1)
+    if (degree < 0)
     {
         throw new Exception("Введено значение степени в ненатуральном виде.");
     }
+    if (degree == 0) return 1;
     int pow = num;
     for(int i = 1; i < degree; i++)
     {
@@ -21,9 +22,9 @@ int Exponentiation(int num, int degree)
 // Ввод числа из консоли по приглашению
 int Prompt(string message)
 {
-    System.Console.Write(message); // Вывод приглашения
-    string strValue; // Объявление переменной для ввода строки
-    strValue = Console.ReadLine() ?? "0"; // Вводим строку с консоли (с консоли можно ввести только строку)
+    System.Console.Write(message);
+    string strValue;
+    strValue = Console.ReadLine() ?? "0";
     if (int.TryParse(strValue, out int value))
     {
         return value;
