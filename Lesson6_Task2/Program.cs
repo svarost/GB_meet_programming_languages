@@ -38,7 +38,9 @@ void IntersectionDirects(double[] directAB, double[] directCD)
         return;
     }
 
-    Console.WriteLine($"Прямые {PrintDirect(directAB)} и {PrintDirect(directCD)} пересекаются в точке ({FindX(directAB, directCD):f2}; {FindY(directAB, directCD):f2})");
+    Console.WriteLine($"Прямые ({PrintDirect(directAB)})" 
+                    + $" и ({PrintDirect(directCD)}) пересекаются в точке "
+                    + $"({FindX(directAB, directCD):f2}; {FindY(directAB, directCD):f2}).");
 }
 
 double[] Prompt(string message)
