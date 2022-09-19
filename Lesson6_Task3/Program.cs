@@ -6,10 +6,11 @@
 //Main
 int[,] matrix = GenerateMatrix(4);
 PrintMatrix(matrix);
-Console.WriteLine(SumItemArray(MaxRowValue(matrix)));
-Console.WriteLine(SumItemArray(MinColumnValue(matrix)));
-Console.WriteLine(SumItemArray(MaxRowValue(matrix)) 
-                - SumItemArray(MinColumnValue(matrix)));
+var minSum = SumItemArray(MinColumnValue(matrix));
+var maxSum = SumItemArray(MaxRowValue(matrix));
+Console.WriteLine(maxSum);
+Console.WriteLine(minSum);
+Console.WriteLine(maxSum - minSum);
 
 // Methods
 int[,] GenerateMatrix(int size)
