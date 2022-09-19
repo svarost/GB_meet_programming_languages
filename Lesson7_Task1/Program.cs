@@ -2,83 +2,49 @@
 // заполненный случайными вещественными числами.
 
 //Main
-int[,] matrix = GenerateMatrix(4);
+double[,] matrix = 
+        GenerateMatrix(Promt("Введите количество строк в массиве: "),
+        Promt("Введите количество столбцов в массиве: "));
 PrintMatrix(matrix);
-var minSum = SumItemArray(MinColumnValue(matrix));
-var maxSum = SumItemArray(MaxRowValue(matrix));
-Console.WriteLine(maxSum);
-Console.WriteLine(minSum);
-Console.WriteLine(maxSum - minSum);
+
 
 // Methods
-int[,] GenerateMatrix(int rowCount, int columnCount)
+double[,] GenerateMatrix(int rowCount, int columnCount)
 {
-    int[,] matrix = new int[rowCount, columnCount];
+    double[,] matrix = new double[rowCount, columnCount];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-           // matrix[i, j] = new Random().NextDouble(1, 10); функц генератор вещ. чисел
-           // return min + r.NextDouble() * (max - min);
+           matrix[i, j] = GenerateDouble(-20, 20);
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]}  ");
+            Console.Write($"{matrix[i, j]}\t");
         }
         Console.WriteLine();
     }
 }
 
-int[] MaxRowValue (int[,] matrix)
+double GenerateDouble(double min, double max)
 {
-    int[] maxRowValue = new int[matrix.GetLength(0)];
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        int maxValue = matrix[i, 0];
-        for (int j = 1; j < matrix.GetLength(1); j++)
-        {
-            if (maxValue < matrix[i, j])
-            {
-                maxValue = matrix[i, j];
-            }
-        }
-        maxRowValue[i] = maxValue;
-    }
-    return maxRowValue;
+    return Math.Round((min + new Random().NextDouble() * (max - min)), 2);
 }
 
-int[] MinColumnValue (int[,] matrix)
+int Promt(string message)
 {
-    int[] minColumnValue = new int[matrix.GetLength(0)];
-    for (int i = 0; i < matrix.GetLength(1); i++)
+    Console.Write(message);
+    if(int.TryParse(Console.ReadLine(), out int value) && value != 0)
     {
-        int minValue = matrix[0, i];
-        for (int j = 1; j < matrix.GetLength(0); j++)
-        {
-            if (minValue > matrix[j, i])
-            {
-                minValue = matrix[j, i];
-            }
-        }
-        minColumnValue[i] = minValue;
+        return value;
     }
-    return minColumnValue;
-}
-
-int SumItemArray(int[] array)
-{
-    int sum = 0;
-    foreach (var item in array)
-    {
-        sum += item;
-    }
-    return sum;
+    throw new Exception("Введенное значение невозможно преобразовать в натуральное число.");
 }
