@@ -48,8 +48,8 @@ double[] Prompt(string message)
     double[] direct = new double[2];
     double value;
     string[] calls = new string[] 
-            {"Введите угловой коэффициент прямой " + message + "(k1): ", 
-             "Введите точку пересечения прямой " + message + " с осью y (b1): "};
+            {"Введите угловой коэффициент прямой " + message + " (k): ", 
+             "Введите точку пересечения прямой " + message + " с осью y (b): "};
     
     for (int i = 0; i < 2; i++)
     {
