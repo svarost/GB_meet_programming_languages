@@ -2,7 +2,7 @@
 // по убыванию элементы каждой строки двумерного массива.
 
 //Main
-int[,] array = GenerateArray(4, 4, 1, 10);
+int[,] array = GenerateArray(6, 8, 1, 10);
 PrintArray(array);
 System.Console.WriteLine();
 PrintArray(SortArray(array));
@@ -36,12 +36,12 @@ int[,] GenerateArray(int rowLength, int columnLength, int minRange, int maxRange
 
 int[,] SortArray(int[,] array)
 {
-    // int[,] resArr = new int[array.GetLength(0), array.GetLength(1)];
+    int[,] resArr = new int[array.GetLength(0), array.GetLength(1)];
     for (int k = 0; k < array.GetLength(0); k++)
     {
         for (int i = 0; i < array.GetLength(1) - 1; i++)
         {
-            for (int j = 1; j < array.GetLength(1); j++)
+            for (int j = i + 1; j < array.GetLength(1); j++)
             {
                 if (array[k, i] < array[k, j])
                 {
