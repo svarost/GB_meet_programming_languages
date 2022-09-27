@@ -10,7 +10,7 @@ Console.WriteLine($"N = {value} -> \"{NumbersRec(value)}\"");
 // Methods
 int Promt(string message)
 {
-    Console.WriteLine(message);
+    Console.Write(message);
     if (int.TryParse(Console.ReadLine(), out int value))
     {
         return value;
