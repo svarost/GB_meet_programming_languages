@@ -2,9 +2,11 @@
 // все натуральные числа в промежутке от N до 1.
 // Выполнить с помощью рекурсии.
 
+using System.Text;
+
 //Main
 int value = Promt("Введите натуральное чило N: ");
-Console.WriteLine($"N = {value} -> \"{NumbersRec(value)}\"");
+Console.WriteLine($"N = {value} -> \"{NumsRec(value)}\"");
 
 
 // Methods
@@ -18,8 +20,8 @@ int Promt(string message)
     throw new Exception("Введено некорректное значение");
 }
 
-string NumbersRec(int value)
+StringBuilder NumsRec(int value)
 {
-    if (value > 1) return $"{value}, " + NumbersRec(value - 1);
-    else return "1";
+    if (value > 1) return new StringBuilder($"{value}, " + NumbersRec(value - 1));
+    else return new StringBuilder("1");
 }
